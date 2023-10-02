@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div>
-      <Link to="index">
-        <button>Index</button>
+      <Link to="comment">
+        <button>Comment</button>
       </Link>
 
       <Link to="config">

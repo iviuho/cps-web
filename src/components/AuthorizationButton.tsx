@@ -6,7 +6,7 @@ const QUERY = qs.stringify(
   {
     client_id: "ydvoimm1fy8ps5h21oxx9hmocdaaey",
     force_verify: false,
-    redirect_uri: "http://localhost:3001/redirect",
+    redirect_uri: `${window.location.origin}/redirect`,
     response_type: "code",
     scope: "channel:read:redemptions"
   },

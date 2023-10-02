@@ -11,7 +11,8 @@ export default function App() {
       <Header />
 
       <Routes>
-        <Route path="index" element={<CommentList />} />
+        <Route index element={<div>This is index page</div>} />
+        <Route path="comment" element={<CommentList />} />
         <Route path="config" element={<Config />} />
         <Route path="redirect" element={<Redirection />} />
       </Routes>

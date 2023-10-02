@@ -3,5 +3,5 @@ export const enum ApiServer {
   DEVELOPMENT = "https://127.0.0.1:3000"
 }
 
-export const API = ApiServer.DEVELOPMENT;
+export const API = ApiServer.PRODUCTION;
 export const VERSION = "0.0.1";

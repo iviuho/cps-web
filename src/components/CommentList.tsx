@@ -28,15 +28,13 @@ function CommentList() {
     }
   }, [auth]);
 
-  return (
+  return loading ? (
+    <Loading />
+  ) : (
     <div>
-      {loading ? (
-        <Loading />
-      ) : comments ? (
-        comments.map((comment, index) => <Comment data={comment} key={index} />)
-      ) : (
-        <div>아직 코멘트가 하나도 없습니다!</div>
-      )}
+      {comments
+        ? comments.map((comment, index) => <Comment data={comment} key={index} />)
+        : "아직 코멘트가 하나도 없습니다!"}
     </div>
   );
 }

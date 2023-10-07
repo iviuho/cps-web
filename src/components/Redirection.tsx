@@ -9,7 +9,7 @@ function Redirection() {
     const params = qs.parse(location.search, { ignoreQueryPrefix: true });
 
     const opener: Window = window.opener;
-    opener.postMessage(params, "http://127.0.0.1:3001");
+    opener.postMessage(params, window.location.origin);
     window.close();
   }, [location]);
 

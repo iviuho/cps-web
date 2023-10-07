@@ -20,7 +20,7 @@ function Config() {
   const [broadcasterConfig, setBroadcasterConfig] = useState<Configuration>();
 
   const redirectListener = useCallback((e: MessageEvent<AuthCode>) => {
-    if (e.origin !== "http://localhost:3001" && e.origin !== "http://127.0.0.1:3001") {
+    if (e.isTrusted === false) {
       return;
     }
 
